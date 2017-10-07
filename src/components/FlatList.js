@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { FlatList, StyleSheet } from 'react-native'
 import ListSeperator from './ListSeperator'
 import ListRow from './ListRow'
-import { SharedStyles } from '../theme'
 
 export default class FList extends Component {
   static defaultProps = {
@@ -37,7 +36,5 @@ export default class FList extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    ...SharedStyles.screen,
-  },
+  container: {},
 })

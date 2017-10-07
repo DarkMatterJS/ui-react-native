@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Text, TouchableOpacity, StyleSheet } from 'react-native'
-import { BasicColors, FontBaseStyle } from '../theme'
-import { Metrics } from '../utils'
+import { Metrics, BasicColors, FontBaseStyle } from '../utils'
 
 export default class DrawerButton extends Component {
   render() {

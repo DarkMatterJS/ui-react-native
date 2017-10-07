@@ -1,5 +1,6 @@
 import { BasicColors, GreyColors, ColorUtils } from './Colors'
-import { ScaleMethods, Metrics } from '../utils'
+import ScaleMethods from './ScaleMethods'
+import Metrics from './Metrics'
 
 /* -- Auto Scaling Typography -- */
 const ScaleMethod = ScaleMethods.perfectFourth
@@ -98,6 +99,7 @@ export const FontBaseStyle = {
 }
 
 export default {
+  baseStyle: FontBaseStyle,
   weights: FontWeights,
   sizes: FontSizes,
   colors: TextColors,

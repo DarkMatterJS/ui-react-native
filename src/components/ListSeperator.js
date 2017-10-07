@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import { Metrics } from '../utils'
-import { BorderBaseStyle } from '../theme'
+import { BorderBaseStyle, Metrics } from '../utils'
 
 const ListSeperator = ({ highlighted }) =>
   Metrics.isiOS && (

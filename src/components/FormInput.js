@@ -1,6 +1,6 @@
 /* @flow */
 import React, { Component } from 'react'
-import { StyleSheet, TextInput } from 'react-native'
+import StyleSheet, { TextInput } from 'react-native'
 import { Spacing, GreyColors } from '../utils'
 
 const styles = StyleSheet.create({

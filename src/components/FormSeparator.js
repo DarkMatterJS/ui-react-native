@@ -1,13 +1,13 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import { Borders } from '../theme'
+import { BorderBaseStyle } from '../utils'
 
 const FormSeparator = () => {
   return <View style={styles.seperator} />
 }
 
 const styles = StyleSheet.create({
-  seperator: Borders.separatorStyle,
+  seperator: BorderBaseStyle,
 })
 
 export default FormSeparator

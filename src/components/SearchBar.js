@@ -7,35 +7,39 @@ import {
   StyleSheet,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import { Fonts, Colors, Metrics, AppStyles } from '../theme'
+import {
+  FontSizes,
+  FontWeights,
+  TextColors,
+  BrightColors,
+  Metrics,
+} from '../utils'
 
 const styles = StyleSheet.create({
   mainContainer: {
-    ...AppStyles.mainContainer,
-    marginTop: Metrics.smallMargin,
+    display: 'flex',
     flexDirection: 'row',
-    width: Metrics.screenWidth - Metrics.baseMargin,
   },
   searchInput: {
     flex: 5,
-    height: Metrics.searchBarHeight,
+    height: 40,
     alignSelf: 'center',
-    padding: Metrics.smallMargin,
+    padding: Metrics.small,
     textAlign: 'left',
-    fontFamily: Fonts.type.base,
-    fontSize: Fonts.size.instructions,
+    fontFamily: FontWeights.regular,
+    fontSize: FontSizes.regular,
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: Colors.white,
+    borderColor: 'white',
     paddingLeft: 30,
-    color: Colors.base50,
+    color: TextColors.regular,
     flexDirection: 'row',
   },
   searchIcon: {
     left: Metrics.doubleBaseMargin,
     alignSelf: 'center',
-    color: Colors.white,
-    backgroundColor: Colors.transparent,
+    color: 'white',
+    backgroundColor: 'transparent',
   },
   cancelButton: {
     alignItems: 'center',
@@ -43,9 +47,9 @@ const styles = StyleSheet.create({
     marginHorizontal: Metrics.baseMargin,
   },
   buttonLabel: {
-    color: Colors.white,
-    fontFamily: Fonts.type.base,
-    fontSize: Fonts.size.regular,
+    color: 'white',
+    fontFamily: FontWeights.regular,
+    fontSize: FontSizes.regular,
   },
 })
 
@@ -63,7 +67,7 @@ export default class SearchBar extends Component {
         <TextInput
           autoFocus
           placeholder="Search"
-          placeholderTextColor={Colors.white}
+          placeholderTextColor="white"
           underlineColorAndroid="transparent"
           style={styles.searchInput}
           value={this.props.searchTerm}
@@ -72,7 +76,7 @@ export default class SearchBar extends Component {
           onSubmitEditing={onSubmitEditing}
           returnKeyType={'search'}
           autoCorrect={false}
-          selectionColor={Colors.white}
+          selectionColor="white"
         />
         <TouchableOpacity onPress={onCancel} style={styles.cancelButton}>
           <Text style={styles.buttonLabel}>Cancel</Text>

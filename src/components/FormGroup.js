@@ -1,7 +1,6 @@
-/* @flow */
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
-import { Spacing, Metrics } from '../utils'
+import StyleSheet, { View } from 'react-native'
+import { Spacing } from '../utils'
 
 const FormGroup = props => (
   <View style={styles.container}>{props.children}</View>
@@ -9,7 +8,7 @@ const FormGroup = props => (
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: Metrics.baseCornerRadius,
+    borderRadius: 3,
     marginVertical: Spacing.regular,
     overflow: 'hidden',
   },

@@ -1,13 +1,4 @@
-{
-  parser: 'babel-eslint',
-  plugins: [
-    'standard',
-    'react',
-    'react-native',
-    'flowtype',
-    'prettier',
-    'import'
-  ],
+module.exports = {
   extends: [
     'standard',
     'standard-jsx',
@@ -18,6 +9,16 @@
     'prettier',
     'prettier/flowtype',
     'prettier/react'
+  ],
+  env: { es6: true, mocha: true, jest: true },
+  parser: 'babel-eslint',
+  plugins: [
+    'standard',
+    'react',
+    'react-native',
+    'flowtype',
+    'prettier',
+    'import'
   ],
   rules: {
     'comma-dangle': [2, 'always-multiline'],
@@ -43,10 +44,7 @@
     },
     sourceType: 'module'
   },
-  env: {
-    "node": true,
-    "es6": true
-  },
+
   globals: {
     __DEV__: true
   }

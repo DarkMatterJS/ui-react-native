@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
-import { Fonts, Colors } from '../theme'
 
 const styles = StyleSheet.create({
   button: {
     marginVertical: 5,
-    backgroundColor: Colors.blue,
+    backgroundColor: 'blue',
   },
   buttonText: {
     margin: 18,
     textAlign: 'center',
-    color: Colors.white,
-    fontSize: Fonts.size.medium,
-    fontFamily: Fonts.type.bold,
+    color: 'white',
+    fontSize: 16,
   },
 })
 

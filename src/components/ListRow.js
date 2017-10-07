@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, TouchableHighlight } from 'react-native'
-import { AppStyles, UnderlayColor } from '../theme'
+import { AppStyles, UnderlayColor } from '../utils'
 
 const styles = AppStyles
 

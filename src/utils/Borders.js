@@ -1,5 +1,5 @@
 import { BasicColors, GreyColors, ColorUtils } from './Colors'
-import Metrics from '../utils'
+import Metrics from './Metrics'
 
 const getBorderTypesFromColor = color => ({
   darkest: ColorUtils.getBrightestOpacityFromColor(color),

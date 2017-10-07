@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
-import { Borders, Fonts, Colors, Metrics } from '../theme'
+import { Spacing, TextColors } from '../utils'
 
 export default class Button extends Component {
   render() {
@@ -27,37 +27,26 @@ export default class Button extends Component {
   }
 }
 
-const styles = {
+const styles = StyleSheet.create({
   base: {
     container: {
-      ...Borders.defaultStyleRadius,
-      paddingHorizontal: Metrics.spacing.large,
-      paddingVertical: Metrics.spacing.small,
-      height: Metrics.buttonHeight,
+      display: 'flex',
+      paddingHorizontal: Spacing.large,
+      paddingVertical: Spacing.small,
       justifyContent: 'center',
       alignItems: 'center',
     },
     text: {
-      ...Fonts.style.body,
+      fontSize: TextColors.regular,
       textAlign: 'center',
     },
   },
   primary: {
-    container: {
-      backgroundColor: Colors.primary,
-      borderWidth: 0,
-    },
-    text: {
-      color: Colors.white,
-    },
+    container: {},
+    text: {},
   },
   secondary: {
-    container: {
-      backgroundColor: Colors.secondary,
-      borderWidth: 0,
-    },
-    text: {
-      color: Colors.white,
-    },
+    container: {},
+    text: {},
   },
-}
+})
