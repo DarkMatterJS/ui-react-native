@@ -1,11 +1,10 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import { BorderBaseStyle, Metrics } from '../utils'
+import Metrics from '../metrics'
+import { BorderBaseStyle } from '../borders'
 
 const ListSeperator = ({ highlighted }) =>
-  Metrics.isiOS && (
-    <View style={[styles.seperator, highlighted && { marginLeft: 0 }]} />
-  )
+  Metrics.isiOS && <View style={[styles.seperator, highlighted && { marginLeft: 0 }]} />
 
 const styles = StyleSheet.create({
   seperator: {

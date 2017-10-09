@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { Text, TouchableHighlight } from 'react-native'
-import { AppStyles, UnderlayColor } from '../utils'
-
-const styles = AppStyles
+import { Text, TouchableHighlight, StyleSheet } from 'react-native'
 
 export default class ListRow extends Component {
   _onPress = () => {
@@ -14,12 +11,15 @@ export default class ListRow extends Component {
       <TouchableHighlight
         style={styles.tableRow}
         onPress={this._onPress}
-        underlayColor={UnderlayColor}
+        underlayColor="rgba(0,0,0,0.05)"
       >
-        <Text style={styles.tableLabel}>
-          {this.props.title}
-        </Text>
+        <Text style={styles.tableLabel}>{this.props.title}</Text>
       </TouchableHighlight>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  tableRow: {},
+  tableLabel: {},
+})

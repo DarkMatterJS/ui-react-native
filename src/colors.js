@@ -88,8 +88,7 @@ const LightnessScale = {
   dark: 0.4,
 }
 
-const getHSLStringFromObject = ({ h, s, l }) =>
-  `hsl(${h},${s * 100}%,${l * 100}%)`
+const getHSLStringFromObject = ({ h, s, l }) => `hsl(${h},${s * 100}%,${l * 100}%)`
 
 // ColorPalettes
 export let LightColors = {}
@@ -129,32 +128,6 @@ Object.keys(ColorHues).forEach(key => {
   })
 })
 
-/* -- Opaque Colors -- */
-
-export const OpacityScale = {
-  transparent: 0.0,
-  lighter: 0.1,
-  light: 0.3,
-  medium: 0.5,
-  bright: 0.7,
-  brighter: 0.9,
-  brightest: 1.0,
-}
-
 export const ColorUtils = {
-  getColorFromHexOpacity: (hex, opacity) => Color(hex).alpha(opacity),
-  getLightestOpacityFromColor: hex =>
-    ColorUtils.getColorFromHexOpacity(hex, OpacityScale.lightest),
-  getLighterOpacityFromColor: hex =>
-    ColorUtils.getColorFromHexOpacity(hex, OpacityScale.lighter),
-  getLightOpacityFromColor: hex =>
-    ColorUtils.getColorFromHexOpacity(hex, OpacityScale.light),
-  getMediumOpacityFromColor: hex =>
-    ColorUtils.getColorFromHexOpacity(hex, OpacityScale.medium),
-  getBrightOpacityFromColor: hex =>
-    ColorUtils.getColorFromHexOpacity(hex, OpacityScale.bright),
-  getBrighterOpacityFromColor: hex =>
-    ColorUtils.getColorFromHexOpacity(hex, OpacityScale.brighter),
-  getBrightestOpacityFromColor: hex =>
-    ColorUtils.getColorFromHexOpacity(hex, OpacityScale.brightest),
+  changeColorAlpha: (hex, opacity) => Color(hex).alpha(opacity),
 }

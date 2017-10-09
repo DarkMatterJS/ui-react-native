@@ -4,9 +4,7 @@ import { Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 const Link = props => (
   <TouchableOpacity {...props}>
-    <Text style={[styles.text, props.textStyle]}>
-      {props.text || props.children || ''}
-    </Text>
+    <Text style={[styles.text, props.textStyle]}>{props.text || props.children || ''}</Text>
   </TouchableOpacity>
 )
 

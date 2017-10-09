@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { FlatList, StyleSheet } from 'react-native'
-import ListSeperator from './ListSeperator'
+import { FlatList as RNFlatList, StyleSheet } from 'react-native'
+import ListSeparator from './ListSeparator'
 import ListRow from './ListRow'
 
-export default class FList extends Component {
+export default class FlatList extends Component {
   static defaultProps = {
     data: [],
   }
@@ -11,21 +11,13 @@ export default class FList extends Component {
   _keyExtractor = (item, index) => item.id
 
   _renderItem = ({ item }) => {
-    return (
-      <ListRow
-        onPressItem={this.props.onPressItem}
-        title={item.title}
-        item={item}
-      />
-    )
+    return <ListRow onPressItem={this.props.onPressItem} title={item.title} item={item} />
   }
 
   render() {
     return (
-      <FlatList
-        ItemSeparatorComponent={({ highlighted }) => (
-          <ListSeperator highlighted={highlighted} />
-        )}
+      <RNFlatList
+        ItemSeparatorComponent={({ highlighted }) => <ListSeparator highlighted={highlighted} />}
         style={styles.screen}
         data={this.props.data}
         keyExtractor={this._keyExtractor}

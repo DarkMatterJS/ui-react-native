@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Text, TouchableOpacity, StyleSheet } from 'react-native'
-import { Metrics, BasicColors, FontBaseStyle } from '../utils'
 
 export default class DrawerButton extends Component {
   render() {
@@ -17,9 +16,5 @@ export default class DrawerButton extends Component {
 }
 
 const styles = StyleSheet.create({
-  text: {
-    ...FontBaseStyle,
-    color: BasicColors.white,
-    marginVertical: Metrics.baseMargin,
-  },
+  text: {},
 })

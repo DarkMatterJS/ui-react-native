@@ -12,14 +12,7 @@ module.exports = {
   ],
   env: { es6: true, mocha: true, jest: true },
   parser: 'babel-eslint',
-  plugins: [
-    'standard',
-    'react',
-    'react-native',
-    'flowtype',
-    'prettier',
-    'import'
-  ],
+  plugins: ['standard', 'react', 'react-native', 'flowtype', 'prettier', 'import'],
   rules: {
     'comma-dangle': [2, 'always-multiline'],
     'import/no-named-as-default-member': [0],
@@ -33,7 +26,8 @@ module.exports = {
         bracketSpacing: true,
         jsxBracketSameLine: false,
         parser: 'flow',
-        semi: false
+        semi: false,
+        printWidth: 100
       }
     ]
   },

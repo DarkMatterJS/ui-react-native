@@ -34,14 +34,7 @@ export default class TimeAgo extends Component {
   }
 
   render() {
-    const timestamp =
-      this.props.time instanceof Date
-        ? this.props.time
-        : new Date(this.props.time)
-    return (
-      <Text {...this.props}>
-        {moment(timestamp).fromNow(this.props.hideAgo)}
-      </Text>
-    )
+    const timestamp = this.props.time instanceof Date ? this.props.time : new Date(this.props.time)
+    return <Text {...this.props}>{moment(timestamp).fromNow(this.props.hideAgo)}</Text>
   }
 }

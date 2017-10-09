@@ -13,7 +13,5 @@ export default class ThemeProvider extends React.Component {
 }
 
 ThemeProvider.childContextTypes = {
-  theme: PropTypes.shape({
-    color: PropTypes.string,
-  }),
+  theme: PropTypes.object,
 }
