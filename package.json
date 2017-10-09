@@ -26,15 +26,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrisbull/DarkMatterUI-ReactNative.git"
+    "url": "https://github.com/DarkMatterJS/ui-react-native.git"
   },
-  "keywords": ["node"],
+  "keywords": ["node", "react native", "react"],
   "author": "Chris <chris@chrisbull.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chrisbull/DarkMatterUI-ReactNative/issues"
+    "url": "https://github.com/DarkMatterJS/ui-react-native/issues"
   },
-  "homepage": "https://github.com/chrisbull/DarkMatterUI-ReactNative#readme",
+  "homepage": "https://github.com/DarkMatterJS/ui-react-native#readme",
   "dependencies": {
     "color": "^2.0.0",
     "emojione": "^3.1.2",
